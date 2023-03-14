@@ -1,15 +1,24 @@
 import React from 'react';
-import { Navbar } from 'react-bootstrap';
+import { Navbar, Container } from 'react-bootstrap';
 
-const Header = () => {
+const Header = ({ title }) => {
+	const navstyle = {
+		backgroundColor: 'lightblue',
+	};
+
 	return (
 		<Navbar
-			bg='dark'
-			variant='dark'
+			variant='light'
+			style={navstyle}
 		>
-			<Navbar.Brand href='/'>
-				Image Galleria
-			</Navbar.Brand>
+			<Container>
+				<Navbar.Brand
+					href='/'
+					className='title'
+				>
+					{title}
+				</Navbar.Brand>
+			</Container>
 		</Navbar>
 	);
 };

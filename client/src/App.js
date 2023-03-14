@@ -1,11 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
+import Search from './components/Search';
 
 function App() {
 	return (
 		<div>
-      <Header />
-			<h3>Image Galleria</h3>
+      <Header title='Image Galleria' />
+			<Search />
+			
 		</div>
 	);
 }
