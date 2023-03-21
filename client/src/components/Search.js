@@ -8,7 +8,8 @@ import {
 } from 'react-bootstrap';
 
 //
-const Search = () => {
+const Search = ({newInput, setNewInput, formSubmit}) => {
+
 	return (
 		<Container className='mt-4'>
 			<Row className='justify-content-center'>
@@ -16,10 +17,14 @@ const Search = () => {
 					xs={12}
 					md={8}
 				>
-					<Form>
+					<Form onSubmit={formSubmit}>
 						<Form.Row>
 							<Col xs={9}>
-								<Form.Control placeholder='Search for images' />
+								<Form.Control
+									type='text'
+									value={newInput}
+									onChange={e => setNewInput(e.target.value)}
+									placeholder='Search for images' />
 							</Col>
 							<Col xs={3}>
 								<Button
