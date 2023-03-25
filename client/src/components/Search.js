@@ -23,8 +23,11 @@ const Search = ({newInput, setNewInput, formSubmit}) => {
 								<Form.Control
 									type='text'
 									value={newInput}
-									onChange={e => setNewInput(e.target.value)}
-									placeholder='Search for images' />
+									placeholder='Type here to search'
+									onChange={(e) =>
+										setNewInput(e.target.value)
+									}
+								/>
 							</Col>
 							<Col xs={3}>
 								<Button
