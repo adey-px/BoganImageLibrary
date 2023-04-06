@@ -1,0 +1,8 @@
+// List langs to validate by eslint
+{
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "javascriptreact"
+  ]
+}
