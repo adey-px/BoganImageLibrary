@@ -1,15 +1,8 @@
 import React from 'react';
-import {
-	Container,
-	Row,
-	Col,
-	Form,
-	Button,
-} from 'react-bootstrap';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 //
-const Search = ({newInput, setNewInput, formSubmit}) => {
-
+const SearchBar = ({ newInput, setNewInput, formSubmit }) => {
 	return (
 		<Container className='mt-4'>
 			<Row className='justify-content-center'>
@@ -24,15 +17,13 @@ const Search = ({newInput, setNewInput, formSubmit}) => {
 									type='text'
 									value={newInput}
 									placeholder='Type here to search'
-									onChange={(e) =>
-										setNewInput(e.target.value)
-									}
+									onChange={(e) => setNewInput(e.target.value)}
 								/>
 							</Col>
 							<Col xs={3}>
 								<Button
 									type='submit'
-									variant='primary'
+									variant='secondary'
 								>
 									Search
 								</Button>
@@ -45,4 +36,4 @@ const Search = ({newInput, setNewInput, formSubmit}) => {
 	);
 };
 
-export default Search;
+export default SearchBar;

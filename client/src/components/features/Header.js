@@ -1,7 +1,9 @@
 import React from 'react';
 import { Navbar, Container } from 'react-bootstrap';
+import style from '../../assets/css/header.module.css';
 
-const Header = ({ title }) => {
+//
+const Header = ({ logo }) => {
 	const navstyle = {
 		backgroundColor: 'lightblue',
 	};
@@ -14,9 +16,9 @@ const Header = ({ title }) => {
 			<Container>
 				<Navbar.Brand
 					href='/'
-					className='title'
+					className={style.logo}
 				>
-					{title}
+					{logo}
 				</Navbar.Brand>
 			</Container>
 		</Navbar>
