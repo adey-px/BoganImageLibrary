@@ -6,8 +6,8 @@
 .pnp.js
 
 # env files
-# .local runs in all environments
-# .development runs in development only, etc
+# .local runs in both dev & production environments
+# .development runs in development environment only
 .env.local
 .env.development.local
 .env.test.local

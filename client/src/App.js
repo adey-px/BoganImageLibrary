@@ -6,11 +6,12 @@ import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import style from './assets/css/image.module.css';
 
-/* unsplash api key from environment */
-// console.log(process.env);
-const KEY = process.env.REACT_APP_UNSPLASH_KEY;
+// Unsplash api key from env vars
+/* console.log(process.env); */
+const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH_KEY;
 
-//
+// Search image logic
+/* https://unsplash.com/documentation */
 function App() {
 	const [newInput, setNewInput] = useState('');
 	const [images, setImages] = useState([]);
@@ -20,7 +21,7 @@ function App() {
 		e.preventDefault();
 		console.log(newInput);
 		fetch(
-			`https://api.unsplash.com/photos/random/?query=${newInput}&client_id=${KEY}`
+			`https://api.unsplash.com/photos/random/?query=${newInput}&client_id=${UNSPLASH_KEY}`
 		)
 			.then((response) => response.json())
 			.then((data) => {
